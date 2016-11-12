@@ -1,0 +1,102 @@
+-------------------------------------------------------------------------------------------------------------------
+___________________________________________________________________________________________________________________
+
+# There are two required ingredients in any SQL query: "SELECT" and "FROM" — and they have to be in that order.
+
+# "SELECT" indicates which columns you’d like to view, and "FROM" identifies the table that they live in.
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Ex 1
+
+SELECT *
+  FROM tutorial.us_housing_units
+  
+# This selects from any or all columns in the table "tutorial.us_housing_units"
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Ex 2
+
+# What’s happening in the query below?
+
+SELECT year,
+       month,
+       west
+  FROM tutorial.us_housing_units 
+
+# In this case, the query is telling the database to return the "year", "month", and "west" columns from the table 
+# "tutorial.us_housing_units". (Remember that when referencing tables in Mode's schema, the table names have to be
+# preceded by the name of user who uploaded it.) 
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Whenever you select multiple columns, they must be separated by commas, but you should *not* include a comma after
+# the last column name.
+
+___________________________________________________________________________________________________________________
+
+# Practice Problem 1
+
+# Write a query to select all of the columns in the tutorial.us_housing_units table without using *.
+
+-------------------------------------------------------------------------------------------------------------------
+
+# My answer
+
+SELECT year, 
+       month, 
+       month_name, 
+       south,
+       west,
+       midwest,
+       northeast
+  FROM tutorial.us_housing_units 
+  
+___________________________________________________________________________________________________________________
+
+# By convention, keep the column names lower case and use underscores instead of spaces.
+
+# However, if you’d like your results to look a bit more presentable, you can rename columns when you select them to
+# include spaces.
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Ex 3
+
+If you want the "west" column to appear as "West Region" in the results, you would have to type:
+
+SELECT west AS "West Region"
+  FROM tutorial.us_housing_units
+  
+___________________________________________________________________________________________________________________
+
+# Practice Problem 2
+
+# Write a query to select all of the columns in tutorial.us_housing_units and rename them so that their first 
+# letters are capitalized. 
+
+-------------------------------------------------------------------------------------------------------------------
+
+# My answer
+
+# 1. Find out the names of the columns
+
+SELECT *
+  FROM tutorial.us_housing_units
+  
+# This gives use the column names "year, month, month_name, south, west, midwest, & northeast"
+
+# 2. Capitilize them!
+
+SELECT year AS "Year", 
+       month AS "Month", 
+       month_name AS "Month Name", 
+       south AS "South",
+       west AS "West",
+       midwest AS "Midwest",
+       northeast AS "Northeast"
+  FROM tutorial.us_housing_units
+
+___________________________________________________________________________________________________________________
+-------------------------------------------------------------------------------------------------------------------
