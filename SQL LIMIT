@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------------------------------------------
+___________________________________________________________________________________________________________________
+
+# By deafult, Mode restricts (or limits) the number of rows the SQL query returns to 100. You can undo this by
+# checking the "Limit 100" box next to "Run".
+
+# Many analysts use limits as a simple way to keep their queries from taking too long to return. For example, if
+# you just wanted to scan the first few rows of data to get an idea of which fields you care about and how you 
+# want to manipulate them, you don't want to end up waiting a long time for all of your results to be displayed
+# because you didn't use a limit.
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Using the LIMIT command
+
+# You can limit the number of rows your SQL query returns by using the following syntax:
+
+SELECT *
+  FROM tutorial.us_housing_units
+ LIMIT 100
+ 
+# This does the same thing as having the "Limit 100" box checked.
+
+___________________________________________________________________________________________________________________
+
+# Practice Problem 1
+
+# Write a query that uses the LIMIT command to restrict the result set to only 15 rows.
+
+-------------------------------------------------------------------------------------------------------------------
+
+# My answer
+
+SELECT *
+  FROM tutorial.us_housing_units
+ LIMIT 15
+ 
+___________________________________________________________________________________________________________________
+
+-------------------------------------------------------------------------------------------------------------------
